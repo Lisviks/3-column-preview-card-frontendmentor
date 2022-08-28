@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* width: 330px; */
+}
+
+.card {
+  padding: 3rem;
+  width: 330px;
+  color: var(--very-light-gray);
+}
+
+.card-sedans {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-suvs {
+  background-color: var(--dark-cyan);
+}
+
+.card-luxury {
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 1.6rem;
+  margin: 1.5rem 0;
+  font-size: 15px;
+}
+
+.btn {
+  padding: 0.7rem 2rem;
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  border-radius: 50px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9rem;
+}
+
+.card-sedans .btn {
+  color: var(--bright-orange);
+}
+
+.card-suvs .btn {
+  color: var(--dark-cyan);
+}
+
+.card-luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+@media (min-width: 1440px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    width: 305px;
+  }
+
+  .card-sedans {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card-luxury {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  p {
+    margin-bottom: 5rem;
+  }
+
+  .btn:hover {
+    color: var(--very-light-gray);
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
