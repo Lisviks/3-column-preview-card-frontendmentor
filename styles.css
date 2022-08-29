@@ -86,7 +86,7 @@ p {
   color: var(--very-dark-cyan);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   body {
     height: 100vh;
     justify-content: center;
